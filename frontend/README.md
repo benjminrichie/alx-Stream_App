@@ -1,13 +1,15 @@
 installation
 
-npm install axios lucide-react react-player react-hot-toast react-router-dom zustand
+1. npm install
 
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+2. npm install axios lucide-react react-player react-hot-toast react-router-dom zustand
 
-npm install -D prettier prettier-plugin-tailwindcss
+3. npm install -D tailwindcss postcss autoprefixer
+   npx tailwindcss init -p
 
-npm install react-slick slick-carousel
+4. npm install -D prettier prettier-plugin-tailwindcss
+
+5. npm install react-slick slick-carousel
 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
