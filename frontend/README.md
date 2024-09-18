@@ -16,3 +16,12 @@ Currently, two official plugins are available:
 
 @vitejs/plugin-react uses Babel for Fast Refresh
 @vitejs/plugin-react-swc uses SWC for Fast Refresh
+
+
+<!-- 
+vercel.json
+{
+    "version": 2,
+    "builds": [{ "src": "./server.js", "use": "@vercel/node" }],
+    "routes": [{ "src": "/(.*)", "dest": "/" }]
+} -->
