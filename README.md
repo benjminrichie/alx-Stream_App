@@ -1,3 +1,4 @@
+New! Keyboard shortcuts … Drive keyboard shortcuts have been updated to give you first-letters navigation
 To successfully run this code on your browser or to start the development server follow the steps below:
 
 1.  Make sure you have node already installed if not, download node from:
@@ -61,4 +62,4 @@ To successfully run this code on your browser or to start the development server
 
 Contributors are
 1. Benjamin Richard 
-2. Elizabeth Eleojo Agada
+2. Elizabeth
