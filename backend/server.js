@@ -21,21 +21,22 @@ import { protectRoute } from "./middleware/protectRoute.js";
 
 
 const app = express();
-const PORT = ENV_VARS.PORT
 
+const PORT = ENV_VARS.PORT
 const __dirname = path.resolve();
 
-app.get('/', (req, res) => {
-    res.send("The Server is ready.");
-});
+// app.get('/', (req, res) => {
+//     res.send("The Server is ready.");
+// });
 
 // Middleware
 // this will allow us to parse req.body
 app.use(express.json()); // Body Parser for JSON
 app.use(cookieParser());
 
-// END POINTS FOR MOVIES
+// END POINTS FOR AUTHENTICATION
 app.use("/api/v1/auth", authRoutes);
+// END POINTS FOR MOVIES
 app.use("/api/v1/movie", protectRoute, movieRoutes);
 // END POINTS FOR TV SHOWS
 app.use("/api/v1/tv", protectRoute, tvRoutes);
@@ -43,12 +44,19 @@ app.use("/api/v1/tv", protectRoute, tvRoutes);
 app.use("/api/v1/search", protectRoute, searchRoutes);
 
 
-if(ENV_VARS.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, "/frontend/dist")));
+// if(ENV_VARS.NODE_ENV === "production") {
+//     app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
-    app.get("*", (req, res) => {
-        res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
-    });
+//     app.get("*", (req, res) => {
+//         res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
+//     });
+// }
+if (ENV_VARS.NODE_ENV === "production") {
+	app.use(express.static(path.join(__dirname, "/frontend/dist")));
+
+	app.get("*", (req, res) => {
+		res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
+	});
 }
 
 
