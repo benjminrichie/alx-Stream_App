@@ -147,23 +147,23 @@ const AuthenticationScreen = () => {
         <div className='h-2 w-full bg-[#232323]' aria-hidden='true' />
         
         {/* 4th Section */}
-        <div className='py-10 bg-black text-white'>
+        {/* <div className='py-10 bg-black text-white'>
             <div className='flex max-w-6xl mx-auto items-center justify-center flex-col-reverse md:flex-row'>
-                {/* LEFT DIV */}
-                <div className='flex-1 relative'>
+                LEFT DIV */}
+                {/* <div className='flex-1 relative'>
                     <img src="/kids.png" alt="Kids" className='mt-4' />
-                </div>
+                </div> */}
                 {/* RIGHT DIV */}
-                <div className='flex-1 text-center md:text-left'>
+                {/* <div className='flex-1 text-center md:text-left'>
                     <h2 className='text-4xl md:text-5xl font-extrabold mb-4'>
                         Create kids profile
                     </h2>
                     <p className='text-lg md:text-2xl'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus saepe velit officia ex! Consectetur harum error non veniam repellendus unde autem sit velit amet eveniet aliquam, nam consequatur repellat quaerat!
                     </p>
-                </div>
-            </div>
-        </div>
+                </div> */}
+            {/* </div>
+        </div> */}
         <Testimonial />
     </div>
   )
