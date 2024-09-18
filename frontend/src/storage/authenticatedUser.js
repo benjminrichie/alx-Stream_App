@@ -48,6 +48,7 @@ export const useAuthStorage = create((set) => ({
             set({ user: response.data.user, isCheckingAuth: false })
         } catch (error) {
             set({ isCheckingAuth: false, user: null });
+            console.error(error); 
             // toast.error(error.response.data.message || "An error occurred while checking authentication");
         }
     },
